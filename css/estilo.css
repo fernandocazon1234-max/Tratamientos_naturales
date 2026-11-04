@@ -1,0 +1,306 @@
+/* ESTILOS GENERALES Y DESPLAZAMIENTO FLUIDO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* CABECERA Y NAVEGACIÓN FIJA */
+header {
+    background-color: #f4e04d;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-circle {
+    background: #1b5e20;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-circle img {
+    width: 25px;
+    filter: brightness(0) invert(1);
+}
+
+.logo-text {
+    font-size: 11px;
+    font-weight: bold;
+    color: #1b5e20;
+    line-height: 1.1;
+}
+
+header h1 {
+    font-size: 22px;
+    color: #114217;
+    font-weight: 800;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #1b5e20;
+    border-bottom: 2px solid #1b5e20;
+}
+
+/* SECCIONES EN FLUJO CONTINUO */
+.seccion {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* SECCIÓN INICIO */
+#inicio {
+    max-width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../imagenes/zzz.jpeg') no-repeat center center/cover;
+    color: white;
+    padding: 120px 80px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.btn-ver-mas {
+    display: inline-block;
+    background-color: #1b5e20;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.btn-ver-mas:hover {
+    background-color: #2e7d32;
+}
+
+/* TÍTULOS DE SECCIÓN */
+.seccion h2 {
+    text-align: center;
+    color: #1b5e20;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle, .section-subtitle-dark {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.section-subtitle {
+    color: #666;
+}
+
+/* GRILLAS RESPONSIVAS */
+.plantas-grid, .remedios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* TARJETAS DE PLANTAS */
+.planta-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.numero-planta {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #1b5e20;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.planta-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.planta-card h3 {
+    padding: 15px 15px 5px 15px;
+    color: #1b5e20;
+    font-size: 22px;
+}
+
+.planta-card p, .planta-card ul {
+    padding: 0 15px 15px 30px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* BENEFICIOS */
+.beneficios-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.beneficio-box {
+    background: #e8f5e9;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 280px;
+    border-left: 5px solid #1b5e20;
+}
+
+.beneficio-box h3 {
+    color: #1b5e20;
+    margin-bottom: 15px;
+}
+
+/* SECCIÓN REMEDIOS (Fondo Oscuro) */
+#remedios.remedios-section {
+    max-width: 100%;
+    background-color: #121212;
+    color: #ffffff;
+    padding: 60px 40px;
+}
+
+#remedios h2 {
+    color: #4caf50;
+}
+
+.section-subtitle-dark {
+    color: #aaa;
+}
+
+.remedios-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.remedio-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.remedio-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.remedio-content {
+    padding: 20px;
+}
+
+.remedio-content h3 {
+    color: #81c784;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.remedio-content p, .remedio-content ol {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #ddd;
+    line-height: 1.4;
+}
+
+.remedio-content ol {
+    margin-left: 20px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #0d230e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* DISEÑO RESPONSIVO PARA MÓVILES */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #inicio {
+        padding: 80px 20px;
+    }
+}
